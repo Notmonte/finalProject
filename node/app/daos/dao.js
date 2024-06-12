@@ -1,19 +1,23 @@
+// All routes
+
 const con = require('../config/dbConfig')
 
 const dao = {
     findAll: (req, res)=> {
-        `SELECT * FROM pc;`,
-        (error, rows)=> {
-            if (!error) {
-                if (rows.length === 1) {
-                    res.json(...rows) 
+        con.execute(
+            `SELECT * FROM pc;`,
+            (error, rows)=> {
+                if (!error) {
+                    if (rows.length === 1) {
+                        res.json(...rows) 
+                    } else {
+                        res.json(rows)
+                    }
                 } else {
-                    res.json(rows)
+                    console.log('DAO ERROR: ', error)
                 }
-            } else {
-                console.log('DAO ERROR: ', error)
             }
-        }
+        )
     },
 
     findById: (req, res, id)=> {
@@ -78,4 +82,4 @@ const dao = {
     }
 } 
 
-modules.exports = dao
+module.exports = dao
