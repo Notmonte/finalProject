@@ -22,7 +22,7 @@ CREATE TABLE pc (
 
 
 
--- Os and Processor table for repeating data (ask herb for help)
+-- Os and Processor table for repeating data 
 CREATE TABLE os (
     os_id MEDIUMINT UNSIGNED AUTO_INCREMENT NOT NULL,
     os VARCHAR(20) NOT NULL

@@ -59,6 +59,23 @@ const dao = {
             })
         } else {
             const fields = Object.keys(req.body)
+            const values = object.values(req.body)
+
+            con.execute(
+                `INSERT INTO pc SET ${fields.join(' = ?, ')} =?;`,
+                values,
+                (error, dbres)=> {
+                    if (!error) {
+                        res.json({
+                            Last_id: dbres.insertId
+                        })
+                    } else {
+                        console.log('DAI ERROR: ', error)
+                    }
+                }
+            )
         }
     }
-}
+} 
+
+modules.exports = dao
