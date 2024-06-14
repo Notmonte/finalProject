@@ -3,7 +3,7 @@ const router = express.Router()
 
 // const dao = require('../../daos/api/osDao')
 
-const { pcDao: dao } = require('../../daos/dao')
+const { processorDao: dao } = require('../../daos/dao')
 
 
 router.get('/', (req, res)=> {
@@ -14,12 +14,12 @@ router.get('/sort', (req, res)=> {
     dao.sort(req, res, dao.table)
 })
 
-router.get('/:id', (req, res)=> {
-    dao.findById(res, dao.table, req.params.id)
-})
+// router.get('/:id', (req, res)=> {
+//     dao.findById(req, res,)
+// })
 
 router.post('/create', (req, res)=> {
-    dao.create(req, res, dao.table)
+    dao.create(req, res)
 })
 
 

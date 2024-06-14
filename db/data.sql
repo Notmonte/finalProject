@@ -1,10 +1,10 @@
-INSERT INTO pc (name, os, tower, processor, video_card, memory, primary_storage, power_supply, price, imgUrl)
+INSERT INTO pc (name, tower, os_id, processor_id, video_card_id, memory, primary_storage, power_supply, price, imgUrl)
 VALUES (
     'iBUYPOWER - AMD Ryzen 5 Starter PC',
-    'windows 11',
     'iBUYPOWER Scale',
-    'AMD Ryzen™ 5 7600 CPU',
-    'Radeon RX 6500 XT - 4GB',
+    1,
+    1,
+    1,
     '16GB DDR5-5200MHz RAM',
     '1TB WD M.2 NVMe SSD',
     '600 Watt - High Power 80 PLUS Gold PSU',
@@ -15,13 +15,13 @@ VALUES (
 
 
 
-INSERT INTO pc (name, os, tower, processor, video_card, memory, primary_storage, power_supply, price, imgUrl)
+INSERT INTO pc (name, tower, os_id,  processor_id, video_card_id, memory, primary_storage, power_supply, price, imgUrl)
 VALUES (
     'CyberPowerPC - Gamer Xtreme Gaming Desktop',
-    'windows 11',
     'CyberPowerPC mid tower',
-    'Intel Core i7 14th Generation',
-    'NVIDIA GeForce RTX 4060 Ti',
+    1,
+    2,
+    2,
     '16 gigabytes',
     '2TB SSD - Black',
     'Power Supply Maximum Wattage 850 Watts',
@@ -30,10 +30,10 @@ VALUES (
 ),
 (
     'HP OMEN - 40L Gaming Desktop',
-    'windows 11 home',
     'HP OMEN tower',
-    'AMD Ryzen 5 7000 Series',
-    'NVIDIA GeForce RTX 4060',
+    2,
+    3,
+    3,
     '16GB DDR5',
     '1TB SSD - Black',
     'Power Supply Maximum Wattage 600 watts',
@@ -42,10 +42,10 @@ VALUES (
 ),
 (
     'CyberPowerPC - Gamer Supreme Gaming Desktop',
-    'windows 11 home',
     'CyberPowerPC mid tower',
-    'AMD Ryzen 7 7000 Series',
-    'NVIDIA GeForce RTX 4070 SUPER 12GB',
+    2,
+    4,
+    4,
     '32GB DDR5 SDRAM',
     '2TB SSD - White',
     'Power Supply Maximum Wattage 850 watts',
@@ -54,10 +54,10 @@ VALUES (
 ),
 (
     'Acer - Predator Orion 5000 Gaming Desktop',
-    'windows 11 home',
     'Acer stock orion tower',
-    'Intel® Core™ i7',
-    'NVIDIA® GeForce RTX™ 4070 Ti',
+    2,
+    5,
+    5,
     '16 GB, DDR5 SDRAM',
     '1 TB SSD',
     'Maximum Power Supply Wattage 800 watts',
@@ -66,10 +66,10 @@ VALUES (
 ),
 (
     'Acer - Nitro 70 Gaming Desktop',
-    'windows 11 home',
     'Acer stock nitro tower',
-    'AMD Ryzen™ 9',
-    'NVIDIA® GeForce RTX™ 4070',
+    2,
+    6,
+    6,
     '32 GB, DDR5 SDRAM',
     '1 TB SSD',
     'Maximum Power Supply Wattage 750W',
@@ -78,10 +78,10 @@ VALUES (
 ),
 (
     'Alienware - Aurora R16 Gaming Desktop',
-    'windows 11 home',
     'Alienware stock Aurora tower',
-    '13th Gen Intel® Core™ i9',
-    'NVIDIA® GeForce RTX™ 4070',
+    2,
+    7,
+    6,
     '32 GB DDR5',
     '1 TB SSD',
     'Maximum Power Supply Wattage 850W',
@@ -90,10 +90,10 @@ VALUES (
 ),
 (
     'CORSAIR - ONE i500 PC',
-    'windows 11 pro',
     'CORSAIR stock i500 tower',
-    'INTEL CORE i9-14900K',
-    'GeForce RTX 4090',
+    3,
+    8,
+    7,
     '64GB DDR5',
     '2TB M.2 NVMe SSD',
     '1000W SFX 80 PLUS Gold',
@@ -102,10 +102,10 @@ VALUES (
 ),
 (
     'CORSAIR - VENGEANCE i8200 iCUE LINK EDITION Gaming PC',
-    'windows 11 pro',
     'Corsair stock vengeance tower',
-    'Intel Core i9',
-    'NVIDIA GeForce RTX 4090',
+    3,
+    9,
+    7,
     '64GB (2x32GB) DDR5-6400',
     '2TB NVMe SSD',
     '1000W ATX 80 PLUS Gold',
@@ -114,10 +114,10 @@ VALUES (
 ),
 (
     'ASUS - ROG STRIX G16CHR',
-    'Windows 11 Home',
     'Asus stcok Strix tower',
-    'Intel® Core™ i7',
-    'NVIDIA® GeForce RTX™4080',
+    2,
+    5,
+    8,
     '4x DDR5 U-DIMM slot 16GB DDR5',
     '2TB SATA HDD',
     '850W power supply',
@@ -128,11 +128,45 @@ VALUES (
 
 
 
-INSERT INTO user (fName, lName, username, email, phone)
+INSERT INTO user (fName, lName, email, phone)
 VALUES (
     'Demonte',
     'Carter',
-    'demon-tae',
     'notmonte8@gmail.com',
     '123-456-7891'
 );
+
+
+
+INSERT INTO os (os)
+VALUES 
+    ('windows 11'),
+    ('windows 11 home'),
+    ('windows 11 pro');
+
+
+INSERT INTO processor (processor)   -- The ™ Does not work in mysql db, instead it will give you a question mark
+VALUES 
+    ('AMD Ryzen 5 7600 CPU'),
+    ('Intel® Core i7 14th Generation'),
+    ('AMD Ryzen 5 7000 Series'),
+    ('AMD Ryzen 7 7000 Series'),
+    ('Intel® Core i7'),
+    ('AMD Ryzen 9'),
+    ('13th Gen Intel® Core™ i9'),
+    ('INTEL® CORE i9-14900K'),
+    ('Intel® Core i9');
+
+
+
+INSERT INTO video_card (video_card)
+VALUES
+    ('Radeon® RX 6500 XT - 4GB'),
+    ('NVIDIA® GeForce RTX 4060 Ti'),
+    ('NVIDIA® GeForce RTX 4060'),
+    ('NVIDIA® GeForce RTX 4070 SUPER 12GB'),
+    ('NVIDIA® GeForce RTX 4070 Ti'),
+    ('NVIDIA® GeForce RTX 4070'),
+    ('NVIDIA® GeForce RTX 4090'),
+    ('NVIDIA® GeForce RTX  4080');
+
