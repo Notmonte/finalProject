@@ -57,3 +57,9 @@ CREATE TABLE user (
     CONSTRAINT fk_os FOREIGN KEY (os_id) REFERENCES os (os_id),
     CONSTRAINT fk_processor FOREIGN KEY (processor_id) REFERENCES processor (processor_id)
 );
+
+-- Added password column VARCHAR(20) NOT NULL
+
+UPDATE user 
+SET password = 'HotCoco79'
+WHERE user_id = 1

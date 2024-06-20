@@ -19,7 +19,7 @@ router.get('/sort', (req, res)=> {
 // })
 
 router.post('/create', (req, res)=> {
-    dao.create(req, res)
+    dao.create(req, res, dao.table)
 })
 
 
