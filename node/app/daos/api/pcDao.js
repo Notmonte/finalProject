@@ -65,7 +65,10 @@ const pcDao = {
 
         sort: (res, table)=> {
             con.execute(
-                `SELECT * FROM ${table} ORDER BY pc,`,
+                `SELECT * FROM ${table} ORDER BY pc,
+                LEFT OUTER JOIN os USING (artist_id)
+                LEFT OUTER JOIN processor USING (processor_id)
+                LEFT OUTER JOIN video_card USING (video_card);`,
                     (error, rows)=> {
                         if (!error) {
                             if (rows.length == 1) {

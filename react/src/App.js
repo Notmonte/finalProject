@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { Routes, Route } from 'react-router-dom'
 
 import Form from "./components/Form";
+import ErrorPage from "./components/ErrorPage";
+import Single from "./components/Single";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -62,7 +64,9 @@ const App =()=> {
                     handleChange={handleChange}
                     handleSubmit={handleSubmit} 
                 />} />
+                <Route path='*' element={ <ErrorPage />} />
                 <Route path='/shop' element={ <Pc />} />
+                <Route path='/:path/:id' element={<Single />} />
             </Routes>
             <Footer />
         </>

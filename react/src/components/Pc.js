@@ -14,7 +14,9 @@ const Pc = ()=> {
         })
     }, [])
 
-    const pcCards = pc.map(pc =>{
+    //  I used .map to get my info from card.js
+
+    const pcCards = pc.map(pc => {
         return <Card 
                     key={pc.pc_id}
                     id={pc.pc_id}
