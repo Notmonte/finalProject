@@ -23,7 +23,7 @@ const Pc = ()=> {
                     name={pc.name}
                     tower={pc.tower}
                     imgUrl={pc.imgUrl}
-                    path={'/shop'}
+                    path={'pc'}
                 />
     })
 

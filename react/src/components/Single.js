@@ -6,44 +6,39 @@ import SingleCard from './SingleCard'
 const Single =()=> {
 
 
-    const [ pc, setPc ] = useState([])
+    const [ item, setItem ] = useState({})
     const params = useParams()
 
     const url = `http://localhost:3005/api/${params.path}/${params.id}`
 
     useEffect(()=> {
-        axios.get(url).then(res => setPc(res.data))
+        axios.get(url).then(res => setItem(res.data)) 
     }, [])
 
+    console.log(item)
 
-    // console.log(pc)
+    let product 
 
-    // const pcSingle = (pc => {
-    //     return <SingleCard 
-    //                 key={pc.pc_id}
-    //                 id={pc.pc_id}
-    //                 imgUrl={pc.imgUrl}
-    //                 name={pc.name}
-    //                 tower={pc.tower}
-    //                 os={pc.os}
-    //                 processor={pc.processor}
-    //                 video_card={pc.video_card}
-    //                 memory={pc.memeory}
-    //                 primary_storage={pc.primary_storage}
-    //                 power_supply={power_supply}
-    //                 price={pc.price}
-    //                 path={'/single'}
-    //             />
-    // })
-
-
+    switch (item.category) {
+        case 'os':
+            product = item.os 
+            break
+        case 'pc':
+            product = item.name 
+            break
+        case 'processor':
+            product = item.processor
+        default: 
+            product = 'Your Product'
+    }
 
 
     return (
         <main className='main' id='singleMain'>
             <div className='container'>
                 <div className='row row-cols-1 row-cols-md-4 g-4'>
-                    <h2>Single</h2>
+                    <h2>{product}</h2>
+                    <img src={`/images/${item.imgUrl}`} alt={item.name} className="img-fluid image card-img-top"/>
                 </div>
             </div>
         </main>

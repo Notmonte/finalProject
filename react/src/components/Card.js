@@ -11,7 +11,7 @@ const Card =(props)=> {
                 <img src={`/images/${props.imgUrl}`} alt={props.name} className="img-fluid image card-img-top"/>
                 <div className="card-body">
                     <h2 className="card-title">
-                        <Link to={`${props.path}/${props.id}`}>
+                        <Link to={`/${props.path}/${props.id}`}>
                             {props.name}
                         </Link>
                     </h2>

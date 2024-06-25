@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Pc from "./components/Pc";
 import axios from "axios"
+import SingleCard from "./components/SingleCard";
 
 
 
@@ -59,11 +60,12 @@ const App =()=> {
             <Routes>
                 <Route path='/' element={ <Home />} />
                 <Route path='/login' element={ 
-                <Form 
-                    formData={formData}
-                    handleChange={handleChange}
-                    handleSubmit={handleSubmit} 
-                />} />
+                    <Form 
+                        formData={formData}
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit} 
+                    />} 
+                />
                 <Route path='*' element={ <ErrorPage />} />
                 <Route path='/shop' element={ <Pc />} />
                 <Route path='/:path/:id' element={<Single />} />
