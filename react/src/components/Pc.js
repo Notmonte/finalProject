@@ -21,7 +21,7 @@ const Pc = ()=> {
                     key={pc.pc_id}
                     id={pc.pc_id}
                     name={pc.name}
-                    tower={pc.tower}
+                    price={pc.price}
                     imgUrl={pc.imgUrl}
                     path={'pc'}
                 />

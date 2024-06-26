@@ -1,0 +1,52 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #151320; */
+    /* height: 100vh; */
+}
+
+.header {
+    background-color: black;
+}
+
+a {
+    margin-right: 15px;
+}
+
+.cards {
+
+}
+
+
+
+
+.shop-img {
+    /* float: left; */
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.header-link {
+    padding: 3px 20px;
+    height: 35px;
+    color: white;
+    transition: .5s ease-in-out;
+    /* border: 2px solid red; */
+}
+
+.header-link:hover {
+    /* transition: .5s ease-in-out; */
+    border-radius: 6px;
+    background-color: darkblue;
+    color: white;
+}
+
+
+
+
+
+
+

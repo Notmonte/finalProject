@@ -5,6 +5,29 @@ const con = require('../../config/dbConfig')
 const pcDao = {
     table: 'pc',
 
+    getInfo: (res, table, id)=> {
+
+        con.execute(
+            `SELECT p.pc_id, p.name, p.tower, p.memory, p.primary_storage, p.power_supply, p.price, p.imgUrl, p.category, o.os, pr.processor, v.video_card
+            FROM pc p
+            JOIN os o USING (os_id)
+            JOIN processor pr USING (processor_id)
+            JOIN video_card v USING (video_card_id)
+            WHERE p.pc_id = ${id}; `,
+            (error, rows)=> {
+                if (!error) {
+                    if (rows.length == 1) {
+                        res.json(...rows)
+                    } else {
+                        res.json(rows)
+                    }
+                } else {
+                    console.log('DAO ERROR', error)
+                }
+            }
+        )
+    },
+
 
     create: (req, res, table)=> {
         if (Object.keys(req.body).length === 0) {
@@ -65,10 +88,7 @@ const pcDao = {
 
         sort: (res, table)=> {
             con.execute(
-                `SELECT * FROM ${table} ORDER BY pc,
-                LEFT OUTER JOIN os USING (artist_id)
-                LEFT OUTER JOIN processor USING (processor_id)
-                LEFT OUTER JOIN video_card USING (video_card);`,
+                `SELECT * FROM ${table} ORDER BY pc;`,
                     (error, rows)=> {
                         if (!error) {
                             if (rows.length == 1) {
