@@ -7,15 +7,21 @@ const Card =(props)=> {
 
     return (
         <div className="col">
-            <div className="card h-100">
-                <img src={`/images/${props.imgUrl}`} alt={props.name} className="img-fluid image card-img-top"/>
-                <div className="card-body">
-                    <h2 className="card-title">
-                        <Link to={`/${props.path}/${props.id}`}>
+            <div className="new-cards h-100">
+                <div className="new-card">
+                    <div className="new-container">
+                        <img className="new-img" src={`/images/${props.imgUrl}`} alt={props.name} />
+                    </div>
+                    <div className="details">
+                    <h2 className="card-title card-h2">
+                        <Link to={`/${props.path}/${props.id}`} className='h2-link'>
                             {props.name}
                         </Link>
                     </h2>
-                    <p>{props.tower}</p>
+                        <ul>
+                            <li>{props.price}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

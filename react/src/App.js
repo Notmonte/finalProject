@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react"  
 import { Routes, Route } from 'react-router-dom'
 
 import Form from "./components/Form";
@@ -9,13 +9,13 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Pc from "./components/Pc";
 import axios from "axios"
-import SingleCard from "./components/SingleCard";
+
 
 
 
 const App =()=> {
 
-    //First Create State for Form; formData is an object
+    //First Create State for Form; formData is an object // Initialzing state
 
     const [formData, setFormData] = useState({
         fName: '',

@@ -28,6 +28,7 @@ tables.forEach(table => {
 // router.use('/api/processor', require('./api/processorRoutes'))
 // router.use('/api/videoCard', require('./api/videoCardRoutes'))
 
+
 // Error page
 router.get('*', (req, res)=> {
     if(req.url === '/favicon.ico') {

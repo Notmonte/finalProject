@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react'
+import {Link} from "react-router-dom"
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import SingleCard from './SingleCard'
 
 const Single =()=> {
 
@@ -54,10 +54,12 @@ const Single =()=> {
                         </div>
                     </div>
                 <div className='col-md-7 d-flex flex-column mt-5'>
-                <h2 className='h2'>{product}</h2>
+                <h2 className='single-h2'>{product}</h2>
                             <ul className='image-ul list-unstyled mt-3'>
                                 <li>Tower: {item.tower} </li>
-                                <li>Os: {item.os} </li>
+                                <li>Os:
+                                    {item.os}
+                                </li>
                                 <li>Processor: {item.processor} </li>
                                 <li>Video Card: {item.video_card} </li>
                                 <li>Memory: {item.memory} </li>

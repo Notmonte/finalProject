@@ -9,7 +9,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                 <form className="form" onSubmit={handleSubmit}>
                     <div className="row">
                         <div className="mb-3 form-check form-div">
-                            <label className="form-label text-capitalize">
+                            <label className="form-label text-capitalize label-name">
                                 first name
                             </label>
                             <input
@@ -22,7 +22,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                             />
                         </div>
                         <div className="mb-3 form-check form-div">
-                            <label className="form-label text-capitalize">
+                            <label className="form-label text-capitalize label-name">
                                 last name
                             </label>
                             <input 
@@ -35,7 +35,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                             />
                         </div>
                         <div className="mb-3 form-check form-div">
-                            <label className="form-label text-capitalize">
+                            <label className="form-label text-capitalize label-name">
                                 email
                             </label>
                             <input 
@@ -48,7 +48,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                             />
                         </div>
                         <div className="mb-3 form-check form-div">
-                            <label className="form-label text-capitalize">
+                            <label className="form-label text-capitalize label-name">
                                 phone
                             </label>
                             <input 
@@ -61,7 +61,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                             />
                         </div>
                         <div className="mb-3 form-check form-div">
-                            <label className="form-label text-capitalize">
+                            <label className="form-label text-capitalize label-name">
                                 password
                             </label>
                             <input 

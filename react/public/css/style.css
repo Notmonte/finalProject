@@ -1,24 +1,126 @@
 * {box-sizing: border-box;}
 
+:root {
+    
+    --font1: "Lora", serif;
+    --fSize: 28px;
+    --fWeight: 500;
+    --fStyle: normal;
+    
+}
+
 body {
     margin: 0;
     padding: 0;
-    /* background-color: #151320; */
+    /* background-color: #151320;  */
     /* height: 100vh; */
-}
-
-.header {
-    background-color: black;
+    /* display: grid; */
+    /* place-items: center center; */
+    font-family: 'Poppins'sans-serif;
 }
 
 a {
     margin-right: 15px;
 }
 
-.cards {
-
+.header {
+    background-color: black;
 }
 
+
+
+
+/* --------------Pc Cards------------ */ 
+/* -- Source For Cards: Coding Artist Youtube - https://www.youtube.com/watch?v=zfG5IELmGX0 -- */
+
+.single-h2 {
+    font-family: var(--font1);
+    font-size: var(--fSize);
+    font-weight: var(--fWeight);
+    font-style: var(--fStyle);
+}
+
+.h2-link {
+    text-decoration: none;
+}
+
+.card-h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.new-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 
+    minmax(400px.1fr));
+    padding: 20px;
+    grid-gap: 40px;
+}
+
+.new-card {
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+    width: 120%;
+}
+
+.new-card>:nth-child(3) {
+    height: 20%;
+}
+
+.new-container {
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+
+.new-img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.new-container:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.new-card>.new-container:after {
+    background-image: linear-gradient(
+        135deg,
+        #0100ec,
+        #c7701f /* #fb36f4 */
+    );
+}
+
+
+.details {
+    padding: 20px 10px;
+}
+
+.details>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+
+.details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+/* --------------Pc Cards End------------ */
 
 
 
@@ -32,7 +134,7 @@ a {
 .header-link {
     padding: 3px 20px;
     height: 35px;
-    color: white;
+    color: #ffffff;
     transition: .5s ease-in-out;
     /* border: 2px solid red; */
 }
@@ -41,9 +143,12 @@ a {
     /* transition: .5s ease-in-out; */
     border-radius: 6px;
     background-color: darkblue;
-    color: white;
+    color: #ffffff;
 }
 
+.label-name {
+    font-weight: bold;
+}
 
 
 
