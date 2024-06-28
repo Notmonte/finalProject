@@ -7,9 +7,9 @@ const Header =()=> {
             <header className="header mb-4">
                 <div className='container'>
                     <div className="row">
-                        <div className="col-7">
-                            <h1 className="text-capitalize text-md-start mt-3">
-                                <Link to='/' className='text-decoration-none'>
+                        <div className="col-7 h1-div">
+                            <h1 className="text-capitalize text-md-start mt-2 header-h1">
+                                <Link to='/' className='text-decoration-none h1-link'>
                                     legit pc site
                                 </Link>
                             </h1>
@@ -17,7 +17,7 @@ const Header =()=> {
                         <div className="col-5">
                             <nav className='nav text-capitalize mt-4 header-nav justify-content-end'>
                                 <Link to='/' className='text-decoration-none header-link'>Home</Link>
-                                <Link to='/login' className='text-decoration-none header-link'>Login</Link>
+                                <Link to='/sign_up' className='text-decoration-none header-link'>sign up</Link>
                                 <Link to='/shop' className='text-decoration-none header-link'>Shop</Link>
                             </nav> 
                         </div>

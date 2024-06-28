@@ -27,6 +27,39 @@ a {
     background-color: black;
 }
 
+.h1-link {
+    color: blue;
+    font-family: var(--font1);
+    padding-bottom: 3px;
+    /* border-bottom: 3px solid #ffffff; */
+}
+
+.h1-div {
+    position: relative;
+}
+
+.header-h1 {
+    margin-right: 400px;
+}
+
+.h1-img {
+    /* padding: 12px; */
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    height: 130px;
+    width: 130px;
+    /* background-color: red; */
+}
+
+@media (min-width: 768px) {
+    .password-div {
+        margin-right: 85px;
+    }
+    .sub-btn {
+        margin-top: 32px;
+    }
+}
 
 
 

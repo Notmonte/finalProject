@@ -40,17 +40,6 @@ const Single =()=> {
                     <div className='col-md-5 mt-4'>
                         <div className=''>
                             <img src={`/images/${item.imgUrl}`} alt={item.name} className="img-fluid image w-75"/>
-                            {/* <h2 className='text-center'>{product}</h2>
-                            <ul className='image-ul'>
-                                <li>Tower: {item.tower} </li>
-                                <li>Os: {item.os} </li>
-                                <li>Processor: {item.processor} </li>
-                                <li>Video Card: {item.video_card} </li>
-                                <li>Memory: {item.memory} </li>
-                                <li>Primary Storage: {item.primary_storage} </li>
-                                <li>Power Supply: {item.power_supply} </li>
-                                <li>Price: ${item.price} </li>
-                            </ul> */}
                         </div>
                     </div>
                 <div className='col-md-7 d-flex flex-column mt-5'>

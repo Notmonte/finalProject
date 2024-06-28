@@ -33,7 +33,7 @@ const Pc = ()=> {
         <main className="main" id="pcMain">
             <div className="container">
                 <h2>Pc's</h2>
-                <div className='row row-cols-1 row-cols-md-5 g-4'>
+                <div className='row row-cols-1 row-cols-lg-5 row-cols-md-3 g-4 d-md-flex justify-content-md-evenly'>
                     { pcCards }
                 </div>
             </div>

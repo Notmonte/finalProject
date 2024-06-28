@@ -5,6 +5,7 @@ const router = express.Router()
 
 const { pcDao: dao } = require('../../daos/dao')
 
+// Routes export to => router
 
 router.get('/', (req, res)=> {
     dao.findAll(res, dao.table)

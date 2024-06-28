@@ -2,6 +2,9 @@ const con = require('../../config/dbConfig')
 // const { findAll } = require('../common/daoCommon')
 
 
+// Dao's export to => Routes
+
+
 const pcDao = {
     table: 'pc',
 

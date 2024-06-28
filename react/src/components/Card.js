@@ -7,8 +7,8 @@ const Card =(props)=> {
 
     return (
         <div className="col">
-            <div className="new-cards h-100">
-                <div className="new-card">
+            <div className="new-cards h-100 container">
+                <div className="new-card card col-auto">
                     <div className="new-container">
                         <img className="new-img" src={`/images/${props.imgUrl}`} alt={props.name} />
                     </div>
