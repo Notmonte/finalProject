@@ -1,9 +1,12 @@
-const Home =()=> {
+
+const Home =(item)=> {
 
     return (
         <main className="main" id="homeMain">
-            <div className="new-container">
-                <h2 className="text-capitalize">home</h2>
+            <div className="container text-center">
+                <h2 className="text-capitalize text-danger">home</h2>
+                <img src="https://via.placeholder.com/1200x500" alt="placeholder img" class="img-fluid image"/>
+                
             </div>
         </main>
     )

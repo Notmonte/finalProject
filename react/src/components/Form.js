@@ -7,8 +7,8 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                     sign up
                 </h2>
                 <form className="form" onSubmit={handleSubmit}>
-                    <div className="row  d-md-flex justify-content-md-center">
-                        <div className="col-auto mb-3 form-check form-div">
+                    <div className="row  d-md-flex justify-content-center">
+                        <div className="col-md-auto mb-3 form-check form-div">
                             <label className="form-label text-capitalize label-name">
                                 first name
                             </label>
@@ -22,7 +22,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                                 required
                             />
                         </div>
-                        <div className=" col-auto mb-3 form-check form-div">
+                        <div className=" col-md-auto mb-3 form-check form-div">
                             <label className="form-label text-capitalize label-name">
                                 last name
                             </label>
@@ -36,7 +36,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                                 required
                             />
                         </div>
-                        <div className="col-auto mb-3 form-check form-div">
+                        <div className="col-md-auto mb-3 form-check form-div">
                             <label className="form-label text-capitalize label-name">
                                 email
                             </label>
@@ -50,7 +50,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                                 required
                             />
                         </div>
-                        <div className="col-auto mb-3 form-check form-div">
+                        <div className="col-md-auto mb-3 form-check form-div">
                             <label className="form-label text-capitalize label-name">
                                 phone
                             </label>
@@ -64,7 +64,7 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                                 required
                             />
                         </div>
-                        <div className="col-auto mb-3 form-check form-div password-div">
+                        <div className="col-md-auto mb-3 form-check form-div password-div">
                             <label className="form-label text-capitalize label-name">
                                 password
                             </label>
@@ -78,8 +78,8 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                                 required
                             />
                         </div>
-                        <div className="col-auto mb-3 sub-btn">
-                            <button type="submit" className="btn btn-primary">
+                        <div className="col-md-auto mb-3 sub-btn d-flex justify-content-center">
+                            <button type="submit" className="btn btn-danger">
                                 create account
                             </button>
                         </div>

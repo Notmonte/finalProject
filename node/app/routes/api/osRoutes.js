@@ -6,8 +6,9 @@ const router = express.Router()
 const { osDao: dao } = require('../../daos/dao')
 
 // Routes export to => router
+// Router gets the path and if recived, the callback function is invoked
 
-router.get('/', (req, res)=> {
+router.get('/', (req, res)=> {  
     dao.findAll(res, dao.table)
 })
 

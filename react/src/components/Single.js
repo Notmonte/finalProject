@@ -38,23 +38,23 @@ const Single =()=> {
             <div className='container mt-5'>
                 <div className='row'>
                     <div className='col-md-5 mt-4'>
-                        <div className=''>
-                            <img src={`/images/${item.imgUrl}`} alt={item.name} className="img-fluid image w-75"/>
+                        <div className='text-center'>
+                            <img src={`/images/${item.imgUrl}`} alt={item.name} className="img-fluid image w-75 single-img"/>
                         </div>
                     </div>
                 <div className='col-md-7 d-flex flex-column mt-5'>
-                <h2 className='single-h2'>{product}</h2>
-                            <ul className='image-ul list-unstyled mt-3'>
-                                <li>Tower: {item.tower} </li>
-                                <li>Os:
+                <h2 className='single-h2 text-center'>{product}</h2>
+                            <ul className='image-ul list-unstyled mt-3 text-center'>
+                                <li className='single-li'>Tower: {item.tower} </li>
+                                <li className='single-li'>Os:
                                     {item.os}
                                 </li>
-                                <li>Processor: {item.processor} </li>
-                                <li>Video Card: {item.video_card} </li>
-                                <li>Memory: {item.memory} </li>
-                                <li>Primary Storage: {item.primary_storage} </li>
-                                <li>Power Supply: {item.power_supply} </li>
-                                <li>Price: ${item.price} </li>
+                                <li className='single-li'>Processor: {item.processor} </li>
+                                <li className='single-li'>Video Card: {item.video_card} </li>
+                                <li className='single-li'>Memory: {item.memory} </li>
+                                <li className='single-li'>Primary Storage: {item.primary_storage} </li>
+                                <li className='single-li'>Power Supply: {item.power_supply} </li>
+                                <li className='single-li'>Price: ${item.price} </li>
                             </ul>
                 </div>
                 </div>

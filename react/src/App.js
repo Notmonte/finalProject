@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Pc from "./components/Pc";
+import Login from "./components/Login";
 
 
 
@@ -73,6 +74,7 @@ const App =()=> {
                         handleSubmit={handleSubmit} 
                     />} 
                 />
+                <Route path='/login' element={ <Login users={users} />} />
                 <Route path='*' element={ <ErrorPage  />} />
                 <Route path='/shop' element={ <Pc />} />
                 <Route path='/:path/:id' element={<Single />} />

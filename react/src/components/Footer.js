@@ -1,9 +1,9 @@
 const Footer =()=> {
 
     return (
-        <footer className="footer" id="footer">
+        <footer className="footer mt-5" id="footer">
             <div className="container">
-                <p className="site-text text-center">Site by Demonte Carter @ 2024</p>
+                <p className="footer-text text-center">Site by Demonte Carter @ 2024</p>
             </div>
         </footer>
     )

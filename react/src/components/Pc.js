@@ -32,8 +32,8 @@ const Pc = ()=> {
     return (
         <main className="main" id="pcMain">
             <div className="container">
-                <h2>Pc's</h2>
-                <div className='row row-cols-1 row-cols-lg-5 row-cols-md-3 g-4 d-md-flex justify-content-md-evenly'>
+                {/* <h2 className="pc-h2">Pc's</h2> */}
+                <div className='row row-cols-1 row-cols-lg-5 row-cols-md-3 g-4 d-flex justify-content-evenly mt-2'>
                     { pcCards }
                 </div>
             </div>

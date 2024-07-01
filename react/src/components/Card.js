@@ -7,10 +7,10 @@ const Card =(props)=> {
 
     return (
         <div className="col">
-            <div className="new-cards h-100 container">
-                <div className="new-card card col-auto">
+            <div className="new-cards h-100">
+                <div className="new-card card">
                     <div className="new-container">
-                        <img className="new-img" src={`/images/${props.imgUrl}`} alt={props.name} />
+                        <img className="new-img img-fluid img" src={`/images/${props.imgUrl}`} alt={props.name} />
                     </div>
                     <div className="details">
                     <h2 className="card-title card-h2">
@@ -18,8 +18,8 @@ const Card =(props)=> {
                             {props.name}
                         </Link>
                     </h2>
-                        <ul>
-                            <li>{props.price}</li>
+                        <ul className='card-ul'>
+                            <li className='list-unstyled card-li text-center me-4'>${props.price}</li>
                         </ul>
                     </div>
                 </div>

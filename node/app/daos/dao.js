@@ -2,6 +2,7 @@
 
 const daoCommon = require('./common/daoCommon')
 
+// Linking to daoCommon.js so they can inherit the queries inside of it 
 
 const osDao = {...daoCommon, ...require('./api/osDao')}
 
@@ -13,6 +14,8 @@ const videoCardDao = {...daoCommon, ...require('./api/videoCardDao')}
 
 const pcDao = {...daoCommon, ...require('./api/pcDao')}
 
+
+// Exported => So they can be imported and used anywhere
 
 module.exports = {
     osDao,
